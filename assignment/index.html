@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gamester</title>
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+	<div class="container pages jumbotron" id="main-page">
+		<main id="app">
+			<div class="jumbotron pages" id="loading">
+				<div class="alert alert-info panel-primary">
+		        	<div class="panel-heading">
+		        		<span><h1>LOADING...</h1></span>			       	
+		        	</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-lg-12">
+						<i class="fa fa-spinner fa-pulse fa-5x"></i>
+					</div>
+	        	</div>
+			</div>
+		    <div class="container pages jumbotron" id="menu">
+		    	<section class="col-sm-12 col-md-12">
+					<nav class="navbar navbar-inverse">
+						<!-- <div class="container"> -->
+							<span class="navbar-brand fa-stack fa-lg" id="game-icon">
+								<i class="fa fa-power-off fa-stack-1x"></i>
+								<i class="fa fa-square-o fa-stack-2x"></i>
+							</span>
+							<span class="navbar-brand navbar-center">
+								<p>Game Menu</p>
+							</span>
+						<!-- </div> -->
+					</nav>
+				</section>
+				<div class="text-center">
+					<div class="btn-group-vertical buttons" id="btn-group"role="group">
+						<div class="btn-group" role="group">
+						    <button type="button" class="btn btn-success">
+							    <span class="fa-stack fa-sm">
+		  							<i class="fa fa-square-o fa-stack-2x"></i>
+							    	<i class="fa fa-gamepad fa-stack-1x"></i> 
+							    </span>
+							    Play
+						    </button>
+						</div>
+						<div class="btn-group" role="group">
+						    <button type="button" class="btn btn-info">
+						    	<span class="fa-stack fa-sm">
+	  								<i class="fa fa-square-o fa-stack-2x"></i>
+							    	<i class="fa fa-connectdevelop fa-stack-1x"></i> 
+						    	</span>
+						    	Leader Board
+						    </button>
+						</div>
+						<div class="btn-group" role="group">
+						    <button type="button" class="btn btn-warning">
+							    <span class="fa-stack fa-sm">
+		  							<i class="fa fa-square-o fa-stack-2x"></i>
+							    	<i class="fa fa-cogs fa-stack-1x"></i>
+							    </span>
+							    Settings
+						    </button>
+						</div>
+					</div>
+				</div>
+		    </div>
+		    <div class="play container pages jumbotron">
+			    <nav class="navbar navbar-inverse">
+			    	<span class="navbar-brand navbar-center">
+						<p>Play</p>
+						<button class="btn btn-default text-right" href="#"><i class="fa fa-bars"></i></button>
+					</span>
+				</nav>
+				<span class="fa-stack fa-5x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+			    	<i class="fa fa-gamepad fa-stack-1x"></i> 
+			    </span>
+		    </div>
+		    <div class="leader-board container pages jumbotron">
+			    <nav class="navbar navbar-inverse">
+			    	<span class="navbar-brand navbar-center">
+						<p>Leader Board</p>
+					</span>
+				</nav>
+				<span class="fa-stack fa-5x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+		    		<i class="fa fa-connectdevelop fa-stack-1x"></i> 
+	    		</span>
+		    </div>
+		    <div class="settings container pages jumbotron">
+			    <nav class="navbar navbar-inverse">
+			    	<span class="navbar-brand navbar-center">
+						<p>Settings</p>
+					</span>
+				</nav>
+				 <span class="fa-stack fa-5x">
+					<i class="fa fa-square-o fa-stack-2x"></i>
+			    	<i class="fa fa-cogs fa-stack-1x"></i>
+			    </span>
+		    </div>
+		</main>
+	</div>
+	<div id="list">
+		
+	</div>
+	<script type="text/html" id="item-view">
+		<div style="border: 2px dotted black"> 
+			<li class="list-group-item">
+				<input type="checkbox" name="check-box" class="check-box"> 
+				<div class="item">
+					<%= item %>	
+				</div>
+			</li>
+		</div>
+	</script>
+	
+
+<!-- Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+	<!-- // <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js" type="text/javascript"></script> -->
+	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js" type="text/javascript"></script>
+	 
+<!-- JS Files -->
+	<script src="js/models/models.js"></script>
+	<script src="js/collections/collections.js"></script>
+	<script src="js/AppView/appView.js"></script>
+	<script src="js/AppView/listView.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

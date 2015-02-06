@@ -1,0 +1,24 @@
+#btn-group button{
+	position: relative;
+	top: 40px;
+	margin: 0 auto;
+	text-align: left;
+}
+/*.btn-group{
+	padding-right: 100px;
+	padding-left: 100px;
+}*/
+input[type='button'] {
+   text-align: left;
+}
+.pages{
+	border: 1px black solid;
+}
+#main-page{
+	background-color: white;
+}
+#game-icon{
+	position: relative;
+	bottom: 8px;
+	left: 8px;
+}
