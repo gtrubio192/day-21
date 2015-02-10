@@ -1,6 +1,10 @@
 var models = Backbone.Model.extend({
 	defaults: {
-		item: null,
-		completed: false
+		mode: null,		// easy, medium, hard
+		user: null,
+		score: null
+
+		// item: null,
+		// completed: false
 	}
 });

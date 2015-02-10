@@ -1,64 +1,117 @@
+		// new collections object. 
+
+		// new gameView, pass in collection object
+
+		// new leaderboardView, pass in collection object
+
+		// new settingsView, pass in collection object
+
+		// create an outside reference for 'this' called self
+
+		// new var Router = Backbone.Extend.router({              })
+			// make routes object with views 
+
+			// new functions for each view inside of routes
+
+			// hide whole page
+
+			// show only the view thats invoked 
+
+		// outside of router, create new router var
+
+		// 		Backbone.history.start();       ?
+
+		// make a hideAll() function that hides class .page-view 
+
 var AppView = Backbone.View.extend({
 	el: '#app',
 	initialize: function(){
-
 		console.log("initializing app view");
 
-		_.bindAll(
-			this,
-			'onAddToDoClick',	
-			'onToDoEnter',
-			'onToDoAdded',
-			'render'
-		);
-		// get handle on input elements - text box and submit button
-		this.$addButton = $('#input-button');
-		this.$item = $('#input-box');
-		// get handle on todoList appending area
-		this.$todoList = $('#item-view');
-		// set up collections
-		this.list = new collections();
-
-		// event listeners
-		this.$addButton.on('click', this.onAddToDoClick);
-		this.$item.on('keyup', this.onToDoEnter);
-		this.list.on('add', this.onToDoAdded);
-	},
-
-	onAddToDoClick: function(){
-		console.log("click");
-		this.newModel = new models();
-		this.newModel.set({
-			item: this.$item.val()
+		// new collections object. 
+		this.users = new collections();
+		// new homeView
+		this.homeView = new homeView({
+			users: this.users
 		});
-		// clear text box
-		this.$item.val('');
-		// console.log(this.newModel);
-		this.list.add(this.newModel);
-		// console.log(this.list);
+		// new gameView, pass in collection object
+		this.gameView = new gameView({
+			users: this.users
+		});
+		// new leaderboardView, pass in collection object
+		this.leaderboardView = new leaderboardView({
+			users: this.users
+		});
+		// new settingsView, pass in collection object
+		this.settingsView = new settingsView({
+			users: this.users
+		});
+		// new loadingView
+		this.loadingView = new loadingView({
+			users: this.users
+		});
 
-	},
+		// create an outside reference for 'this' called self
+		var self = this;
+		// new var Router = Backbone.Extend.router({              })
+		var Router = Backbone.Router.extend({
+			// hideAll();
+			// loading();
+			// this.loadingView.$el.show();			
 
-	onToDoEnter: function(e) {
-		if(e.which == 13) {
-			console.log("Enter button");
-			this.onAddToDoClick();
-		}
-	},
+			// make routes object with views 
+			routes: {
+				// looks for #url : functions in router
+				'loading': 'loading',
+				'menu': 'home',
+				'game': 'game',
+				'leader-board': 'leaderboard',
+				'settings': 'settings'
+			},
+			// new functions for each view inside of routes
+			loading: function(){
+			// hide whole page (create new function for hideAll)
+				console.log("Loading");
+				// self.hideAll();
+				$('.pages').hide();
+			// show only the view thats invoked 
+				self.loadingView.$el.show();
+			},
+			home: function(){
+				console.log("Home");
+				// self.hideAll();
+				$('.pages').hide();
+				self.homeView.$el.show();
+			},
+			game: function(){
+				console.log("game");
+				// self.hideAll();
+				$('.pages').hide();
+				self.gameView.$el.show();				
+			},
+			leaderboard: function(){
+				console.log("leader-board");
+				// self.hideAll();
+				$('.pages').hide();
 
-	render: function(){
+				self.leaderboardView.$el.show();
+			},
+			settings: function(){
+				console.log("settings");
+				$('.pages').hide();
+				// self.hideAll();
+				console.log(self.settingsView.$el);
+				self.settingsView.$el.show();
+				console.log(self.settingsView.$el.css('display'));
+			}
+		});
+		// outside of router, create new router var
+		var approuter = new Router();
 
-	},
-
-	onToDoAdded: function(todoModel){
-		console.log("collection increased");
-		// console.log(todoModel.attributes);
-		// console.log("Model attributes: " + todoModel.attributes);
-		var newItemView = new ListItemView( {model: todoModel } );
-		// console.log(newItemView.$el);
-		// console.log(this.$todoList);
-		$('#list').append(newItemView.$todo);
+		Backbone.history.start(); 
+	}, // end of initialize
+		// make a hideAll() function that hides class .page-view 
+	hideAll: function(){
+		$('pages').hide();
 	}
-
-
 });
