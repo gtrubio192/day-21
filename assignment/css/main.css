@@ -1,6 +1,6 @@
-#btn-group button{
-	position: relative;
-	top: 40px;
+#btn-group a{
+	/*position: relative;
+	top: 40px;*/
 	margin: 0 auto;
 	text-align: left;
 }
@@ -13,6 +13,7 @@ input[type='button'] {
 }
 .pages{
 	border: 1px black solid;
+	display: none;
 }
 #main-page{
 	background-color: white;

@@ -11,115 +11,112 @@
 
 </head>
 <body>
-	<div class="container pages jumbotron" id="main-page">
+	<div class="container jumbotron" id="main-page">
+		<nav class="navbar navbar-inverse">
+			<p class="navbar-brand navbar-center"><a href='#menu'>Home</a> </p>
+			<p class="navbar-brand navbar-center"><a href='#game'>Game</a> </p>
+			<p class="navbar-brand navbar-center"><a href='#leader-board'>Leader Board</a> </p>
+			<p class="navbar-brand navbar-center"><a href='#settings'>Settings</a> </p>
+		</nav>
 		<main id="app">
-			<div class="jumbotron pages" id="loading">
-				<div class="alert alert-info panel-primary">
-		        	<div class="panel-heading">
-		        		<span><h1>LOADING...</h1></span>			       	
+			<div class="page-view">
+				<div class="jumbotron pages" id="loading">
+					<div class="alert alert-info panel-primary">
+			        	<div class="panel-heading">
+			        		<span><h1>LOADING...</h1></span>			       	
+			        	</div>
+					</div>
+					<div class="row text-center">
+						<div class="col-lg-12">
+							<i class="fa fa-spinner fa-pulse fa-5x"></i>
+						</div>
 		        	</div>
 				</div>
-				<div class="row text-center">
-					<div class="col-lg-12">
-						<i class="fa fa-spinner fa-pulse fa-5x"></i>
+			    <div class="container pages jumbotron" id="home">
+			    	<section class="col-sm-12 col-md-12">
+						<nav class="navbar navbar-inverse">
+							<!-- <div class="container"> -->
+								<span class="navbar-brand fa-stack fa-lg" id="game-icon">
+									<i class="fa fa-square-o fa-stack-2x"></i>
+									<i class="fa fa-power-off fa-stack-1x"></i>
+								</span>
+								<span class="navbar-brand navbar-center">
+									<p>Game Menu</p>
+								</span>
+							<!-- </div> -->
+						</nav>
+					</section>
+					<div class="text-center">
+						<div class="btn-group-vertical buttons" id="btn-group"role="group">
+							<div class="btn-group" role="group">
+							    <!-- <a href='#game'> -->
+								    <a type="button" class="btn btn-success" href='#game'>
+									    <span class="fa-stack fa-sm">
+				  							<i class="fa fa-square-o fa-stack-2x"></i>
+									    	<i class="fa fa-gamepad fa-stack-1x"></i> 
+									    </span>
+									    Play
+								    </a>
+							    <!-- </a> -->
+							</div>
+							<div class="btn-group" role="group">
+							    <a type="button" class="btn btn-info" href='#leader-board'>
+							    	<span class="fa-stack fa-sm">
+		  								<i class="fa fa-square-o fa-stack-2x"></i>
+								    	<i class="fa fa-connectdevelop fa-stack-1x"></i> 
+							    	</span>
+							    	Leader Board
+							    </a>
+							</div>
+							<div class="btn-group" role="group">
+							    <a type="button" class="btn btn-warning" href='#settings'>
+								    <span class="fa-stack fa-sm">
+			  							<i class="fa fa-square-o fa-stack-2x"></i>
+								    	<i class="fa fa-cogs fa-stack-1x"></i>
+								    </span>
+								    Settings
+							    </a>
+							</div>
+						</div>
 					</div>
-	        	</div>
-			</div>
-		    <div class="container pages jumbotron" id="menu">
-		    	<section class="col-sm-12 col-md-12">
-					<nav class="navbar navbar-inverse">
-						<!-- <div class="container"> -->
-							<span class="navbar-brand fa-stack fa-lg" id="game-icon">
-								<i class="fa fa-power-off fa-stack-1x"></i>
-								<i class="fa fa-square-o fa-stack-2x"></i>
-							</span>
-							<span class="navbar-brand navbar-center">
-								<p>Game Menu</p>
-							</span>
-						<!-- </div> -->
+			    </div>
+			    <div class="container pages jumbotron" id="game">
+				    <nav class="navbar navbar-inverse">
+				    	<span class="navbar-brand navbar-center">
+							<p>Play</p>
+							<button class="btn btn-default text-right" href="#"><i class="fa fa-bars"></i></button>
+						</span>
 					</nav>
-				</section>
-				<div class="text-center">
-					<div class="btn-group-vertical buttons" id="btn-group"role="group">
-						<div class="btn-group" role="group">
-						    <button type="button" class="btn btn-success">
-							    <span class="fa-stack fa-sm">
-		  							<i class="fa fa-square-o fa-stack-2x"></i>
-							    	<i class="fa fa-gamepad fa-stack-1x"></i> 
-							    </span>
-							    Play
-						    </button>
-						</div>
-						<div class="btn-group" role="group">
-						    <button type="button" class="btn btn-info">
-						    	<span class="fa-stack fa-sm">
-	  								<i class="fa fa-square-o fa-stack-2x"></i>
-							    	<i class="fa fa-connectdevelop fa-stack-1x"></i> 
-						    	</span>
-						    	Leader Board
-						    </button>
-						</div>
-						<div class="btn-group" role="group">
-						    <button type="button" class="btn btn-warning">
-							    <span class="fa-stack fa-sm">
-		  							<i class="fa fa-square-o fa-stack-2x"></i>
-							    	<i class="fa fa-cogs fa-stack-1x"></i>
-							    </span>
-							    Settings
-						    </button>
-						</div>
-					</div>
-				</div>
-		    </div>
-		    <div class="play container pages jumbotron">
-			    <nav class="navbar navbar-inverse">
-			    	<span class="navbar-brand navbar-center">
-						<p>Play</p>
-						<button class="btn btn-default text-right" href="#"><i class="fa fa-bars"></i></button>
-					</span>
-				</nav>
-				<span class="fa-stack fa-5x">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-			    	<i class="fa fa-gamepad fa-stack-1x"></i> 
-			    </span>
-		    </div>
-		    <div class="leader-board container pages jumbotron">
-			    <nav class="navbar navbar-inverse">
-			    	<span class="navbar-brand navbar-center">
-						<p>Leader Board</p>
-					</span>
-				</nav>
-				<span class="fa-stack fa-5x">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-		    		<i class="fa fa-connectdevelop fa-stack-1x"></i> 
-	    		</span>
-		    </div>
-		    <div class="settings container pages jumbotron">
-			    <nav class="navbar navbar-inverse">
-			    	<span class="navbar-brand navbar-center">
-						<p>Settings</p>
-					</span>
-				</nav>
-				 <span class="fa-stack fa-5x">
-					<i class="fa fa-square-o fa-stack-2x"></i>
-			    	<i class="fa fa-cogs fa-stack-1x"></i>
-			    </span>
-		    </div>
+					<span class="fa-stack fa-5x">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+				    	<i class="fa fa-gamepad fa-stack-1x"></i> 
+				    </span>
+			    </div>
+			    <div class="container pages jumbotron" id="leader-board">
+				    <nav class="navbar navbar-inverse">
+				    	<span class="navbar-brand navbar-center">
+							<p>Leader Board</p>
+						</span>
+					</nav>
+					<span class="fa-stack fa-5x">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+			    		<i class="fa fa-connectdevelop fa-stack-1x"></i> 
+		    		</span>
+			    </div>
+			    <div class="container pages jumbotron" id="settings">
+				    <nav class="navbar navbar-inverse">
+				    	<span class="navbar-brand navbar-center">
+							<p>Settings</p>
+						</span>
+					</nav>
+					 <span class="fa-stack fa-5x">
+						<i class="fa fa-square-o fa-stack-2x"></i>
+				    	<i class="fa fa-cogs fa-stack-1x"></i>
+				    </span>
+			    </div>
+			</div>
 		</main>
 	</div>
-	<div id="list">
-		
-	</div>
-	<script type="text/html" id="item-view">
-		<div style="border: 2px dotted black"> 
-			<li class="list-group-item">
-				<input type="checkbox" name="check-box" class="check-box"> 
-				<div class="item">
-					<%= item %>	
-				</div>
-			</li>
-		</div>
-	</script>
 	
 
 <!-- Libraries -->
@@ -130,9 +127,16 @@
 	 
 <!-- JS Files -->
 	<script src="js/models/models.js"></script>
+
 	<script src="js/collections/collections.js"></script>
+
+	<script src="js/AppView/homeView.js"></script>
+	<script src="js/AppView/gameView.js"></script>
+	<script src="js/AppView/leaderboardView.js"></script>
+	<script src="js/AppView/loadingView.js"></script>
+	<script src="js/AppView/settingsView.js"></script>
 	<script src="js/AppView/appView.js"></script>
-	<script src="js/AppView/listView.js"></script>
+
 	<script src="js/main.js"></script>
 
 </body>
