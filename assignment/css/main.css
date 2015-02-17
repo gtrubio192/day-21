@@ -35,3 +35,9 @@ input[type='button'] {
 	top: 50%;
 	left: 25%;    
 }
+
+.icon-view{
+    position: relative;
+	bottom: 6px;
+	left: 0px;
+}
