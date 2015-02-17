@@ -66,16 +66,20 @@ var AppView = Backbone.View.extend({
 				'menu': 'home',
 				'game': 'game',
 				'leader-board': 'leaderboard',
-				'settings': 'settings'
+				'settings': 'settings',
+                '': 'loading'
 			},
 			// new functions for each view inside of routes
 			loading: function(){
-			// hide whole page (create new function for hideAll)
 				console.log("Loading");
 				// self.hideAll();
 				$('.pages').hide();
 			// show only the view thats invoked 
 				self.loadingView.$el.show();
+                setTimeout(function(){
+                    self.loadingView.$el.hide();
+                    self.homeView.$el.show();
+                },4000);
 			},
 			home: function(){
 				console.log("Home");

@@ -23,3 +23,15 @@ input[type='button'] {
 	bottom: 8px;
 	left: 8px;
 }
+
+#fa-bar{
+    position: relative;
+	top: 8px;
+	right: 8px;
+}
+
+#iFrame{
+    position: relative;
+	top: 50%;
+	left: 25%;    
+}

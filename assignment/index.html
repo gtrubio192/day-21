@@ -82,21 +82,37 @@
 			    </div>
 			    <div class="container pages jumbotron" id="game">
 				    <nav class="navbar navbar-inverse">
-				    	<span class="navbar-brand navbar-center">
-							<p>Play</p>
-							<button class="btn btn-default text-right" href="#"><i class="fa fa-bars"></i></button>
+				    	<span class="navbar-brand">
+                            <span class="fa-stack">
+                                <i class="fa fa-square-o fa-stack-2x"></i>
+                                <i class="fa fa-gamepad fa-stack-1x"></i> 
+                            </span>
+                            <span>
+                                Play
+                            </span>
 						</span>
+                        <button id="fa-bar" class="btn btn-default pull-right" href="#">
+                            <i class="fa fa-bars"></i>
+                        </button>
 					</nav>
+<!--
 					<span class="fa-stack fa-5x">
 						<i class="fa fa-square-o fa-stack-2x"></i>
 				    	<i class="fa fa-gamepad fa-stack-1x"></i> 
 				    </span>
+-->
+                    <span class="text-center" id="iFrame">
+                        <iframe class="text-center" src="http://neave.com/tic-tac-toe/" width="300px" height="300px">
+                        </iframe>                    
+                    </span>
+
 			    </div>
 			    <div class="container pages jumbotron" id="leader-board">
 				    <nav class="navbar navbar-inverse">
 				    	<span class="navbar-brand navbar-center">
 							<p>Leader Board</p>
 						</span>
+                        <button id="fa-bar" class="btn btn-default pull-right" href="#"><i class="fa fa-bars"></i></button>
 					</nav>
 					<span class="fa-stack fa-5x">
 						<i class="fa fa-square-o fa-stack-2x"></i>
@@ -108,6 +124,7 @@
 				    	<span class="navbar-brand navbar-center">
 							<p>Settings</p>
 						</span>
+                        <button id="fa-bar" class="btn btn-default pull-right" href="#"><i class="fa fa-bars"></i></button>
 					</nav>
 					 <span class="fa-stack fa-5x">
 						<i class="fa fa-square-o fa-stack-2x"></i>
